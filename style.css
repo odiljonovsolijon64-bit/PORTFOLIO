@@ -71,9 +71,9 @@ a {
   cursor: pointer;
 }
 
-.hero__btn:hover{
+.hero__btn:hover {
   background-color: rgb(6, 6, 166);
-  transition: .6s ease-in-out;
+  transition: 0.6s ease-in-out;
 }
 
 .hero__info {
@@ -510,11 +510,11 @@ img {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.abt{
+.abt {
   color: white;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
