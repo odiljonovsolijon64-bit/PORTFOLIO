@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
 li {
   list-style-type: none;
 }
@@ -20,6 +16,57 @@ a {
   width: 1240px;
   margin: 0 auto;
   padding: 20px;
+}
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* stays behind everything */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
+  animation: moveStars linear infinite;
+}
+
+#stars {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation-duration: 60s;
+  opacity: 0.5;
+}
+
+#stars2 {
+  background-image: radial-gradient(white 2px, transparent 2px);
+  background-size: 100px 100px;
+  animation-duration: 100s;
+  opacity: 0.3;
+}
+
+#stars3 {
+  background-image: radial-gradient(white 3px, transparent 3px);
+  background-size: 150px 150px;
+  animation-duration: 150s;
+  opacity: 0.2;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
 }
 .nav__wrapper {
   display: flex;
@@ -119,19 +166,27 @@ a {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .fronts {
   background: blue;
   color: white;
+  border-radius: 10px;
+}
+.fronts img {
+  border-radius: 10px;
 }
 
 .backs {
-  background: #6a5cff;
+  background: rgba(200, 180, 255, 0.35);
   color: white;
   transform: rotateY(180deg);
   padding: 28px;
   padding-top: 100px;
+
+  backdrop-filter: blur(10px); /* ✨ blur effect */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
 }
 
 .cardst {
@@ -392,13 +447,14 @@ img {
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+  color: yellowgreen;
   margin-bottom: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .kelajak {
   background-color: #203a43;
 }
-.hero__kelajak {
+i .hero__kelajak {
   color: yellowgreen;
   margin-top: 30px;
 }
@@ -488,6 +544,7 @@ img {
   list-style: none;
   height: 120px;
   width: 100%;
+  color: yellowgreen;
   padding-top: 40px;
   font-family: "Poppins", sans-serif;
   justify-content: center;
