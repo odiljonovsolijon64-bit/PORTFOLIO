@@ -108,6 +108,11 @@ a {
   color: yellowgreen;
 }
 
+.hero__div:hover {
+  transform: scale(115%);
+  transition: 0.5s ease-in-out;
+}
+
 .hero__btn {
   padding: 18px 24px;
   border-radius: 20px;
