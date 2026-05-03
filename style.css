@@ -522,6 +522,14 @@ i .hero__kelajak {
   transition: 0.4s;
 }
 
+.number__lists{
+  display: flex;
+  justify-content:center;
+  margin-top: 30px;
+  color: white;
+  gap: 30px;
+}
+
 .carden-wrapper:hover .carden {
   transform: scale(0.9);
   filter: brightness(0.7);
