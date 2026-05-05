@@ -108,9 +108,13 @@ a {
   color: yellowgreen;
 }
 
+.hero__div{
+  transition: 0.4s;
+}
+
 .hero__div:hover {
   transform: scale(115%);
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .hero__btn {
